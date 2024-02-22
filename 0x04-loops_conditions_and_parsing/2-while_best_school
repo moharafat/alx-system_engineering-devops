@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
 number=1
-while [ $number -lt 10 ] 
+while [ $number -lt 11 ] 
 do
     echo "BestSchool"
     number=$(( number+1 ))
