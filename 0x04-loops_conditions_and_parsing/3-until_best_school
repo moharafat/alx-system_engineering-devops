@@ -3,6 +3,6 @@
 number=1
 until [ $number -gt 10 ] 
 do
-    echo "BestSchool"
+    echo "Best School"
     number=$(( number+1 ))
 done
