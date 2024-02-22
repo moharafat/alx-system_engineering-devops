@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-#except"Hi" on 9th
-number=1
-while [ $number -lt 11 ] 
+#except the oth say "Hi"
+number=0
+while [ $number -lt 10 ] 
 do
-    echo "BestSchool"
-    number=$(( number+1 ))
+    if [ $number -eq 9 ]
+    then
+        echo "Hi"
+    fi
+        echo "Best School"
+    (( number++ ))
 done
