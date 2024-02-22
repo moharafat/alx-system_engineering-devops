@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+#except the oth say "Hi"
+
+number=1
+
+
+while [ $number -lt 21 ] 
+do
+    echo $number
+case $number in
+    "4")
+        echo "bad luck from China";;
+    "9")
+        echo "bad luck from Japan";;
+    "17")
+        echo "bad luck from Italy";;
+esac
+  (( number++ ))
+done
