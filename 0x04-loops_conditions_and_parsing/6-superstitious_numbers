@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-#except the oth say "Hi"
+# This script is displaying numbers except at 4, 9,17
+#where id displays diff. sentences
 
 number=1
 

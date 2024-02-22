@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-#except the oth say "Hi"
+# This script is displaying a clock
 
 hour=0
 
