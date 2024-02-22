@@ -4,7 +4,6 @@
 
 number=0
 
-
 while [ $number -lt 10 ] 
 do
   if [ $number -eq 3 ]
