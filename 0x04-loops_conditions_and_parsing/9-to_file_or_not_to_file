@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays The content of the current directory with no numbers
+# This script is displaying "Best School" 10 times
 for filename in *;
 do
 if [[ $filename != .* ]];
