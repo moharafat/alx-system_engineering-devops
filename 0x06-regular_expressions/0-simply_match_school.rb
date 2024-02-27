@@ -1,0 +1,1 @@
+/home/mohamed/alx-system_engineering-devops-2/0x01-shell_permissions
