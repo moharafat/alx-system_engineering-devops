@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Setting up SSH config file
 include stdlib
 
