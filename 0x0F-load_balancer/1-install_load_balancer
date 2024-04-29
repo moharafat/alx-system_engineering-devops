@@ -1,0 +1,22 @@
+#!/bin/bash
+# Install and configure HAProxy to load balance between web-01 and web-02
+
+# Update package lists and install HAProxy
+sudo apt-get update
+sudo apt-get -y install haproxy
+
+# Configure HAProxy to use roundrobin algorithm and distribute traffic to web-01 and web-02
+sudo tee /etc/haproxy/haproxy.cfg > /dev/null <<'EOF'
+frontend http_front
+    bind *:80
+    stats uri /haproxy?stats
+    default_backend http_back
+
+backend http_back
+    balance roundrobin
+    server 530964-web-01 54.173.50.211:80 check
+    server 530964-web-02 54.90.56.120:80 check
+EOF
+
+# Restart HAProxy service
+sudo systemctl restart haproxy
