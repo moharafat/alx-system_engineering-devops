@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""Returns INFO. of employee after it's ID is passed as argumeent"""
+"""script to export data in the CSV format."""
 import requests
 import sys
 
 
 if __name__ == "__main__":
     URL = "https://jsonplaceholder.typicode.com/"
+
+
     EMPLOYEE_DATA = requests.get(URL + "users/{}".format(sys.argv[1])).json()
-    EMPLOYEE_NAME = EMPLOYEE_DATA.get("name")
+    EMPLOYEE_ID = EMPLOYEE_DATA.get("id")
+    EMPLOYEE_USERNAME = EMPLOYEE_DATA.get("username")
 
     Tasks_4_emply = requests.get(
         URL + "todos/", params={"userId": sys.argv[1]}).json()
