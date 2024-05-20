@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Returns INFO. of employee after it's ID is passed as argumeent"""
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
