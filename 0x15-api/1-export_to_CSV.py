@@ -11,7 +11,8 @@ if __name__ == "__main__":
     EMPLOYEE_ID = EMPLOYEE_DATA.get("id")
     EMPLOYEE_USERNAME = EMPLOYEE_DATA.get("username")
 
-    todos_response = requests.get(URL + "todos/", params={"userId": sys.argv[1]})
+    todos_response = requests.get(
+        URL + "todos/", params={"userId": sys.argv[1]})
     todos_response.raise_for_status()
     todos_data = todos_response.json()
     file_name = f"{EMPLOYEE_ID}.csv"
@@ -19,5 +20,6 @@ if __name__ == "__main__":
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos_data:
-            writer.writerow([EMPLOYEE_ID, EMPLOYEE_USERNAME, task.get("completed"), task.get("title")])
-        
+            writer.writerow([
+                EMPLOYEE_ID, EMPLOYEE_USERNAME, task.get(
+                    "completed"), task.get("title")])
