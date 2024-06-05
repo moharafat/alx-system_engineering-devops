@@ -3,6 +3,7 @@
 titles of all hot articles passed subreddit"""
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=""):
     """script queries Reddit API returns list containing
     titles of all hot articles passed subreddit"""
