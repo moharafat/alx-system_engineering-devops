@@ -5,13 +5,14 @@ import requests
 from collections import Counter
 import re
 
+
 def count_words(subreddit, word_list, after=None, word_count=None):
     """script queries Reddit API returns list containing
     titles of all hot articles passed subreddit"""
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; MyRedditApp/0.1)'}
     params = {'limit': 100}
-    
+
     # adding 'after' param.
     if after:
         params['after'] = after
